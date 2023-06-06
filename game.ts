@@ -38,9 +38,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const currentShape = guesses.join(' ');
+        const int = 200;
+        
+        
+        //currentGuess.forEach(shapeSequence,i) =>{
+
+        //}
+       
         if (currentShape == shapeSequence) {
-            //link over to winninSCreen
+            //link over to winningSCreen
+            //how to switch screen on win
         }
+
+        if (guesses.length === 5) {
+            //link over to losingScreen
+        }
+
+        guesses.push([]);
 
     }
 
@@ -51,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < 25; i ++){
             let block = document.createElement("div");
             block.classList.add("block");
+            //add the animation here
+            //block.classList.add(animation)
             block.setAttribute("id", i + 1);
             gameGrid.appendChild(block);
         }
