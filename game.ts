@@ -31,6 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function getBlockColor(shape, i ) {
+        const correctShape = shapeSequence.includes(shape);
+
+        if(!correctShape){
+            
+        }
+
+    }
+
     function enteredSequence() {
         const currentGuess = getCurrentGuess();
         if (currentGuess.length != 5) {
@@ -40,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentShape = guesses.join(' ');
         const int = 200;
         
-        
+
         //currentGuess.forEach(shapeSequence,i) =>{
 
         //}
