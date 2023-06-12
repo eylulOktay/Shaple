@@ -1,5 +1,6 @@
 html{
-    background-color: blanchedalmond;
+    background-image: url(../images/openingScreenBackground-rain.gif);
+    background-size: cover;
 }
 
 .center {
