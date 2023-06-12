@@ -35,9 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const correctShape = shapeSequence.includes(shape);
 
         if(!correctShape){
-            
+            //block becomes red
         }
 
+        const shapeInCurrentPos = shapeSequence.charAt(i);
+        const rightPos = shape = shapeInCurrentPos;
+
+        if (rightPos) {
+            //block becomes green
+        }
     }
 
     function enteredSequence() {
@@ -46,9 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.alert("Please enter a sequence with 5 shapes!");
         }
 
-        const currentShape = guesses.join(' ');
-        const int = 200;
-        
+        const currentShape = guesses.join(' ');        
 
         //currentGuess.forEach(shapeSequence,i) =>{
 
@@ -91,4 +95,33 @@ document.addEventListener("DOMContentLoaded", () => {
             getShapesGuessed(shape);
         }
     };
+
+    function deleteShape() {
+        const currentGuess = getCurrentGuess();
+        const deletedShape = currentGuess.pop();
+
+        guesses[guesses.length-1] = currentGuess;
+
+        const lastEnteredShape = document.getElementById(String(spacesOpen-1));
+        lastEnteredShape.textContent = "";
+        spacesOpen -= 1;
+     
+        for (let i = 0; i < keyPress.length; i++) {
+            keyPress[i].onclick = ({ target }) => {
+              const shape = target.getAttribute("data-key");
+        
+              if (shape === "enter") {
+                enteredSequence();
+                return;
+              }
+        
+              if (shape === "del") {
+                deleteShape();
+                return;
+              }
+        
+              getShapesGuessed(shape);
+            };
+        }
+    }
 });
