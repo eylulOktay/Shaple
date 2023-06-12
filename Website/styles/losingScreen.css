@@ -1,0 +1,13 @@
+html {
+    background-color:cadetblue;
+
+}
+
+.center {
+    text-align: center;
+}
+
+button {
+    font-size: 100px;
+    background-color: black;
+}
