@@ -1,12 +1,23 @@
 body {
     background-image: url("../images/crying.gif");
+    background-size: 110px;
 }
 
 .center {
     text-align: center;
 }
 
+.rect {
+    height:400px;
+    width:800px;
+    background:white;
+    color:black;
+    text-align: center;
+    stroke: black;
+}
+
 button {
     font-size: 60px;
-    background-color: rgb(196, 112, 112);
+    background-color: rgb(24, 59, 20);
 }
+
