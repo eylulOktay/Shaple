@@ -1,5 +1,8 @@
 //The actual game will be coded here.
-//randomization
+
+//WHAT IS NEEDED:
+//block colors changing
+//do i need to make the grid before i can change the colors of the blocks accoridnly
 
 console.log("included");
 
@@ -7,13 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Loading");
     //this array will store each guessed shape sequence
-    let guesses = [[]];
+    let guesses = [];
+
+    let allGuesses = [];
 
     //how many spots are open to place a shape guess
     let spacesOpen = 1;
 
     //hard coded placeholder sequence of keys
-    let shapeSequence = "DFGHJ"
+    let shapeSequence = "g f d h k"
 
     //keys will correspond to certain shapes D-K 
     const keyPress = document.querySelectorAll(".keyboard-row button");
@@ -31,8 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function getShapesGuessed(shape){
         //gets current sequence
         const currentGuess = getCurrentGuess();
+
+        console.log(currentGuess);
+        console.log(guesses.length);
         
-        if (currentGuess && guesses.length < 5){
+        if (guesses.length < 5){
 
             guesses.push(shape);
             console.log(guesses)
@@ -46,47 +54,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //makes grid block chaneg color based on correct, misplaced, and wrong guesses
     function getBlockColor(shape, i ) {
-        //this wouldnt be correct because it would only check if the guessed shape is 
-        //in the correct seuqeucne not if its in the correct position
-        const correctShape = shapeSequence.includes(shape);
+     
+        const includedShape = shapeSequence.includes(shape);
+        //current shape user is on
+        const shapeInCurrentPos = shapeSequence.charAt(i);
 
-        if(!correctShape){
+        if(!includedShape){
+            //docQuerySelector
             //block becomes red
         }
 
-        //current shape user is on
-        const shapeInCurrentPos = shapeSequence.charAt(i);
-        const rightPos = shape = shapeInCurrentPos;
-
-        if (rightPos) {
-            //block becomes green
+        //included but wrong pos
+        else{
+            if(guesses[i] !== shapeInCurrentPos){
+                //yellow
+            }
+            else{
+                //green
+            }
         }
     }
 
     function enteredSequence() {
-        const currentGuess = getCurrentGuess();
+        //const currentGuess = getCurrentGuess();
         
         //if they press enter without filling in all the spaces there is a window alert
-        if (currentGuess.length != 5) {
+        if (guesses.length != 5) {
             window.alert("Please enter a sequence with 5 shapes!");
         }
 
         const currentShape = guesses.join(' ');        
-
-        //currentGuess.forEach(shapeSequence,i) =>{
-
-        //}
+        console.log(currentShape);
        
         if (currentShape == shapeSequence) {
-            //link over to winningSCreen
-            //how to switch screen on win
+            window.location.href = "winningScreen.html";
         }
 
-        if (guesses.length === 5) {
-            //link over to losingScreen
+        if (allGuesses.length === 5) {
+            window.location.href = "losingScreen.html";
         }
 
-        guesses.push([]);
+        allGuesses.push(guesses);
+        console.log(allGuesses.join(' '));
+        guesses = [];
 
     }
 
@@ -136,6 +146,9 @@ document.addEventListener("DOMContentLoaded", () => {
         
               if (shape === "enter") {
                 enteredSequence();
+                for(let j = 0; j < guesses.length; j++) {
+                    getBlockColor(shape, j);
+                }
                 return;
               }
         
