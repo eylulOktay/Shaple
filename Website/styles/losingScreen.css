@@ -1,6 +1,5 @@
-html {
-    background-color:cadetblue;
-
+body {
+    background-image: url("../images/crying.gif");
 }
 
 .center {
@@ -8,6 +7,6 @@ html {
 }
 
 button {
-    font-size: 100px;
-    background-color: black;
+    font-size: 60px;
+    background-color: rgb(196, 112, 112);
 }
