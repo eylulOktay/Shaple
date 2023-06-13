@@ -1,6 +1,6 @@
 body {
     background-image: url("../images/crying.gif");
-    background-size: 150px;
+    background-size: 380px;
 }
 
 .center {
@@ -8,17 +8,17 @@ body {
 }
 
 .rect {
-    height:490px;
-    width:890px;
+    height:800px;
+    width:790px;
     background:#f7f8f4;
     color:black;
     text-align: center;
     stroke: black;
     position:absolute;
     top:50%;
-    left:49%;
+    left:50%;
     transform:translate(-50%,-50%);
-    
+
 }
 
 .button1 {

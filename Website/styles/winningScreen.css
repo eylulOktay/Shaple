@@ -1,6 +1,6 @@
 body {
     background-image: url("../images/happypompom.gif");
-    background-size: 110px;
+    background-size: 380px;
 }
 
 h1{
@@ -11,15 +11,15 @@ h1{
 }
 
 .rect {
-    height:490px;
-    width:890px;
+    height:890px;
+    width:790px;
     background:#fbf9f7;
     color:black;
     text-align: center;
     stroke: black;
     position:absolute;
     top:50%;
-    left:49%;
+    left:50%;
     transform:translate(-50%,-50%);
 }
 .center {
