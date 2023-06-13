@@ -1,8 +1,11 @@
 //The actual game will be coded here.
 //randomization
 
+console.log("included");
+
 document.addEventListener("DOMContentLoaded", () => {
 
+    console.log("Loading");
     //this array will store each guessed shape sequence
     let guesses = [[]];
 
@@ -29,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
         //gets current sequence
         const currentGuess = getCurrentGuess();
         
-        //if the 
         if (currentGuess && guesses.length < 5){
 
             guesses.push(shape);
+            console.log(guesses)
 
             const spaceAvailable = document.getElementById("String(1)");
             spacesOpen += 1;
@@ -101,10 +104,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+
     for (let i = 0; i < keyPress.length; i++) {
         keyPress[i].onclick = ({target}) => {
+            console.log("key pressed");
             const shape = target.getAttribute("data-key");
+            console.log(shape);
+
             if (shape === 'enter') {
+                console.log("enter");
                 enteredSequence();
                 return;
             }
@@ -140,4 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         }
     }
+
+    // main
+    getShapeGrid();
+
+
 });
