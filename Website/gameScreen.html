@@ -12,22 +12,46 @@
 //J - star
 //K - triangle
 -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Shaple</title>
-  <link rel="stylesheet" href="styles/gameScreen.css">
-</head> 
-<body>
-    <div class = "wrapper">
-        <div class = "box d">D</div>
-        <div class = "box f">F</div>
-        <div class = "box g">G</div>
-        <div class = "box h">H</div>
-        <div class = "box j">J</div>
-        <div class = "box k">K</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shaple!</title>
+
+    <link rel="stylesheet" href="styles/gameScreen.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="game">
+        <header>
+          <h1 class="title">SHAPLE!</h1>
+        </header>
+
+        <div id="board-container">
+          <div id="board"></div>
+        </div>
+
+        <div id="keyboard-container">
+          <div class="keyboard-row">
+            <div class="spacer-half"></div>
+            <button data-key="enter" class="wide-button">Enter</button>
+            <button data-key="d" class = "button">d</button>
+            <button data-key="f" class = "button">f</button>
+            <button data-key="g" class = "button">g</button>
+            <button data-key="h" class = "button">h</button>
+            <button data-key="j" class = "button">j</button>
+            <button data-key="k" class = "button">k</button>
+            <button data-key="del" class="wide-button">Del</button>
+            <div class="spacer-half"></div>
+          </div>
+        </div>
+      </div>
     </div>
-</body> 
+  </body>
 </html>
