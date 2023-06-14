@@ -1,0 +1,76 @@
+html{
+    background-image: url(../images/openingScreenBackground-rain.gif);
+    background-size:cover;
+}
+
+.rect {
+    height:800px;
+    width:790px;
+
+    background:#213c317d;
+    color:black;
+    text-align: center;
+    stroke: black;
+
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+}
+
+h1 {
+    color: #ddedeb;
+    opacity: .75;
+
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+
+    margin: 0.4rem 0 0.4rem 0;
+    text-align: center;
+    text-decoration-line: underline;
+
+    position: absolute;
+    top: 5%;
+    left:30%;
+}
+
+h2 {
+    color:#ddedeb;
+    opacity: .75;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+    position: absolute;
+    top: 15%;
+    left: 5%;
+
+}
+
+li {
+    color:#ddedeb;
+    list-style-type:none;
+}
+
+button {
+    font-size: 75px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color:#ddedeb;
+    
+    border: 7px;
+    border-color:#ddedeb;
+    border-style: solid;
+
+    background-color: transparent;
+    opacity: .75;
+
+    position: absolute;
+    top:50%;
+    left:36%;
+}
