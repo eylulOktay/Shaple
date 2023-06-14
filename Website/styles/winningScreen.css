@@ -3,26 +3,82 @@ body {
     background-size: 380px;
 }
 
-h1{
-    font-size: 20px;
-}
-.button {
-    size: 100px;
-}
-
 .rect {
     height:890px;
     width:790px;
+
     background:#fbf9f7;
     color:black;
     text-align: center;
     stroke: black;
+    
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
 }
 
+
+h1 {
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+
+    color: #c07e42;
+
+    position: absolute;
+    top:10%;
+    left:20%;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+
+    color: #c07e42;
+
+    position: absolute;
+    top:35%;
+    left:30%;
+}
+
 .center {
     text-align: center;
-} 
+}
+
+.button1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+
+    background-color:#f7f8f4;
+    border-color:#c07e42;
+    border-width: 5px;
+    color:#c07e42;
+    text-shadow:2px 2px #cbcbcb;
+
+    position: absolute;
+    top:75%;
+    left:11%
+}
+
+.button1:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+.button2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+
+    background-color:#f7f8f4;
+    border-color:#c07e42;
+    border-width: 5px;
+    color:#c07e42;
+    text-shadow:2px 2px #cbcbcb;
+
+    position:absolute;
+    top:75%;
+    left:64%;
+}
+
+.button2:hover {
+    background-color: rgb(206, 206, 206);
+}
