@@ -4,6 +4,57 @@
 //block colors changing
 //do i need to make the grid before i can change the colors of the blocks accoridnly
 
+//why doesnt this work?
+//gets rows and columns and sett each img to a src of the shape pic 
+var t = document.getElementById("grid");
+console.log(t)
+for (let r=0; r<5; r++) {
+    let row = t.insertRow(r);
+    for (let c=0; c<5; c++) {
+        let cell = row.insertCell(c);
+        
+        let id1 = r;
+        let id2 = c + 1;
+        
+        let img1 = document.createElement("img");
+        img1.src = "images/circleShape.png";
+        img1.setAttribute("hidden", "hidden");
+        img1.setAttribute("id", "d" + id1 + id2);
+
+        let img2 = document.createElement("img");
+        img2.src = "images/diamondShape.png";
+        img2.setAttribute("hidden", "hidden");
+        img2.setAttribute("id", "f" + id1 + id2);
+
+        let img3 = document.createElement("img");
+        img3.src = "images/heartShape.png";
+        img3.setAttribute("hidden", "hidden");
+        img3.setAttribute("id", "g" + id1 + id2);
+
+        let img4 = document.createElement("img");
+        img4.src = "images/squareShape.png";
+        img4.setAttribute("hidden", "hidden");
+        img4.setAttribute("id", "h" + id1 + id2);
+
+        let img5 = document.createElement("img");
+        img5.src = "images/starShape.png";
+        img5.setAttribute("hidden", "hidden");
+        img5.setAttribute("id", "j" + id1 + id2);
+
+        let img6 = document.createElement("img");
+        img6.src = "images/triangleShape.png";
+        img6.setAttribute("hidden", "hidden");
+        img6.setAttribute("id", "k" + id1 + id2);
+        
+        cell.appendChild(img1)
+        cell.appendChild(img2)
+        cell.appendChild(img3)
+        cell.appendChild(img4)
+        cell.appendChild(img5)
+        cell.appendChild(img6)
+    }
+}
+
 console.log("included");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -44,6 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             guesses.push(shape);
             console.log(guesses)
+
+            //concatonates id with shape (letter) and guesses (number)
+            let x = allGuesses.length + 1
+            let id = shape + x + guesses.length;
+            let element = document.getElementById(id); 
+            element.removeAttribute("hidden");
 
             const spaceAvailable = document.getElementById("String(1)");
             spacesOpen += 1;
@@ -99,21 +156,52 @@ document.addEventListener("DOMContentLoaded", () => {
         guesses = [];
 
     }
-
-    function getShapeGrid() {
-        const gameGrid = document.getElementById("grid");
-
-        //loops through indexes in the grid
-        for (let i = 0; i < 25; i ++){
-            let block = document.createElement("div");
-            block.classList.add("block");
-            //add the animation here
-            //block.classList.add(animation)
-            block.setAttribute("id", i + 1);
-            gameGrid.appendChild(block);
+    
+    function drawGrid(container) {
+        const grid = document.createElement('div');
+        grid.className = 'grid';
+      
+        for (let i = 0; i < 6; i++) {
+          for (let j = 0; j < 5; j++) {
+            drawBox(grid, i, j);
+          }
         }
+      
+        container.appendChild(grid);
     }
 
+    function updateGrid() {
+        for (let i = 0; i < state.grid.length; i++) {
+          for (let j = 0; j < state.grid[i].length; j++) {
+            const box = document.getElementById(`box${i}${j}`);
+            box.textContent = state.grid[i][j];
+          }
+        }
+    }
+      
+    function drawBox(container, row, col, letter = '') {
+        const box = document.createElement('div');
+        box.className = 'box';
+        box.textContent = letter;
+        box.id = `box${row}${col}`;
+      
+        container.appendChild(box);
+        return box;
+    }
+      
+    // function getShapeGrid() {
+    //     const gameGrid = document.getElementById("grid");
+
+    //     //loops through indexes in the grid
+    //     for (let i = 0; i < 25; i ++){
+    //         let block = document.createElement("div");
+    //         block.classList.add("block");
+    //         //add the animation here
+    //         //block.classList.add(animation)
+    //         block.setAttribute("id", i + 1);
+    //         gameGrid.appendChild(block);
+    //     }
+    // }
 
     for (let i = 0; i < keyPress.length; i++) {
         keyPress[i].onclick = ({target}) => {
@@ -162,8 +250,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function startup() {
+        const game = document.getElementById('game');
+        drawGrid(game);
+    }
+      
+    startup();
+
     // main
-    getShapeGrid();
-
-
+    //getShapeGrid();
 });
