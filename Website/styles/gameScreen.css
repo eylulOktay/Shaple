@@ -112,3 +112,27 @@ body {
   .spacer-half {
     flex-grow: 0.5;
   }
+
+   .block {
+    border: 3px;
+    min-width: 1em;
+    min-height: 1em;
+  } 
+
+  .block {
+    background-color: lightgrey;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+  }
+  
+  .grid {
+    width: 600px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: 100px 100px 100px;
+    grid-auto-flow: column;
+  }
+  
