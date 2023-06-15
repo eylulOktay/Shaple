@@ -2,41 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shaple</title>
-  <link rel="stylesheet" href="styles/controlScreen.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control Screen</title>
+  <link rel="stylesheet" href="styles/controlScreen.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
-  <div align="center">
-    <div class="rect">
+  <h1 class = "title">CONTROLS</h1>
+  <h2 class = "subtitle">Shaple is heavily inspired by the popular game WORDLE</h2>
 
-      <h1>CONTROLS</h1>
-      <h2>Shaple is HEAVILY inspired by the popular game WORDLE</h2> 
-      <!--<button>Play Again</button> -->
-      <a href="openingScreen.html">
-      <button>HOME</button>
-          </a>
-      
-      <h3>A keyboard for accessing the shapes is provided, but you can still access the shapes using key presses.</h3>
+  <p class = "instructions">Press the buttons on screen to input shapes into the grid.</p>
 
-
-      <div id="keyboard-container">
-        <div class="keyboard-row">
-          <div class="spacer-half"></div>
-          <button data-key="enter" class="wide-button">Enter</button>
-          <button data-key="d" class = "button">d</button>
-          <button data-key="f" class = "button">f</button>
-          <button data-key="g" class = "button">g</button>
-          <button data-key="h" class = "button">h</button>
-          <button data-key="j" class = "button">j</button>
-          <button data-key="k" class = "button">k</button>
-          <button data-key="del" class="wide-button">Del</button>
-          <div class="spacer-half"></div>
-        </div>
-      </div>
+  <div id="keyboard-container">
+    <div class="keyboard-row">
+      <div class="spacer-half"></div>
+      <button data-key="enter" class="wide-button">Enter</button>
+      <button data-key="d" class = "button"><img src="images/tinyCircleShape.png"></button>
+      <button data-key="f" class = "button"><img src = "images/tinyDiamondShape.png"></button>
+      <button data-key="g" class = "button"><img src = "images/tinyHeartShape.png"></button>
+      <button data-key="h" class = "button"><img src = "images/tinySquareShape.png"></button>
+      <button data-key="j" class = "button"><img src = "images/tinyStarShape.png"></button>
+      <button data-key="k" class = "button"><img src = "images/tinyTriangleShape.png"></button>
+      <button data-key="del" class="wide-button">Del</button>
+      <div class="spacer-half"></div>
     </div>
-    
-    </div>
-  </div>
-
-</body> 
+</body>
 </html>
