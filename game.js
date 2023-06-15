@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(guesses)
 
             //concatonates id with shape (letter) and guesses (number)
-            let x = allGuesses.length + 1
+            let x = allGuesses.length;
             let id = shape + x + guesses.length;
             let element = document.getElementById(id); 
             element.removeAttribute("hidden");
@@ -157,18 +157,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
     
-    // function drawGrid(container) {
-    //     const grid = document.createElement('div');
-    //     grid.className = 'grid';
+    function drawGrid(container) {
+        const grid = document.createElement('div');
+        grid.className = 'grid';
       
-    //     for (let i = 0; i < 6; i++) {
-    //       for (let j = 0; j < 5; j++) {
-    //         drawBox(grid, i, j);
-    //       }
-    //     }
+        for (let i = 0; i < 6; i++) {
+          for (let j = 0; j < 5; j++) {
+            drawBox(grid, i, j);
+          }
+        }
       
-    //     container.appendChild(grid);
-    // }
+        container.appendChild(grid);
+    }
 
     function updateGrid() {
         for (let i = 0; i < state.grid.length; i++) {
@@ -223,19 +223,10 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(guesses)
 
         //concatonates id with shape (letter) and guesses (number)
-        let x = allGuesses.length + 1
+        let x = allGuesses.length;
         let id = shape + x + guesses.length;
         let element = document.getElementById(id); 
         element.setAttribute("hidden");
-            
-        // const currentGuess = getCurrentGuess();
-        // const deletedShape = currentGuess.pop();
-
-        // guesses[guesses.length-1] = currentGuess;
-
-        // const lastEnteredShape = document.getElementById(String(spacesOpen-1));
-        // lastEnteredShape.textContent = "";
-        // spacesOpen -= 1;
     }
      
     for (let i = 0; i < keyPress.length; i++) {
