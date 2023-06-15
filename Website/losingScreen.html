@@ -17,7 +17,14 @@
   <div align="center">
     <div class="rect">
         <h1>You Lost!</h1>
-        <h2>The word was </h2> 
+        <h2>The word was:</h2>
+        <h3 id="correctSequence"></h3>
+        <script src="../game.js"></script>
+        <script>
+          let shape = document.cookie.split("=")[1];
+          document.getElementById("correctSequence").innerText = document.cookie.split("=")[1]
+        </script>
+
         <!--<button>Play Again</button> -->
         <img src="images/respassLosing.png">
         <a href="gameScreen.html">
