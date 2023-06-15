@@ -2,7 +2,6 @@
 
 //WHAT IS NEEDED:
 //PROBLEMS:
-//when you press enter before 5 shapes are entered it goes to the next row- it shld stay on same one
 //colors need to be added
 //how to randomize the winnign sequence
 
@@ -138,6 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //if they press enter without filling in all the spaces there is a window alert
         if (guesses.length != 5) {
             window.alert("Please enter a sequence with 5 shapes!");
+            return;
         }
 
         const currentShape = guesses.join(' ');        
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "winningScreen.html";
         }
 
-        if (allGuesses.length === 5) {
+        if (allGuesses.length === 4) {
             window.location.href = "losingScreen.html";
         }
 
@@ -230,7 +230,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
      
     for (let i = 0; i < keyPress.length; i++) {
+        
         keyPress[i].onclick = ({ target }) => {
+            console.log(keyPress);
             const shape = target.getAttribute("data-key");
         
             if (shape === "enter") {
@@ -244,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (shape === "del") {
                 deleteShape();
                 return;
-              }
+            }
         
             getShapesGuessed(shape);
         };
