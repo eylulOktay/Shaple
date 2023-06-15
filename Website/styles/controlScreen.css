@@ -3,74 +3,79 @@ html{
     background-size:cover;
 }
 
-.rect {
-    height:800px;
-    width:790px;
-
-    background:#213c317d;
-    color:black;
-    text-align: center;
-    stroke: black;
-
-
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-
-}
-
-h1 {
-    color: #ddedeb;
-    opacity: .75;
-
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 60px;
+.title {
+    color: gainsboro;
+    font-size: 4.5rem;
     font-weight: bold;
-
     margin: 0.4rem 0 0.4rem 0;
     text-align: center;
-    text-decoration-line: underline;
-
-    position: absolute;
-    top: 5%;
-    left:30%;
-}
-
-h2 {
-    color:#ddedeb;
-    opacity: .75;
-
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bold;
-
-    position: absolute;
-    top: 15%;
-    left: 5%;
-
-}
-
-li {
-    color:#ddedeb;
-    list-style-type:none;
-}
-
-button {
-    font-size: 75px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    color:#ddedeb;
-    
-    border: 7px;
-    border-color:#ddedeb;
-    border-style: solid;
+  }
 
-    background-color: transparent;
-    opacity: .75;
+  .subtitle { 
+    color: gainsboro;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.4rem 0 0.4rem 0;
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .instructions {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    color: gainsboro;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.4rem 0 0.4rem 0;
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  #keyboard-container {
+    height: 200px;
+  }
+  
+  .keyboard-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 8px;
+    touch-action: manipulation;
+  }
+  
+  .keyboard-row button {
+    font-family: inherit;
+    font-weight: bold;
+    border: 0;
+    padding: 0;
+    height: 58px;
+    cursor: pointer;
+    background-color: #77a98084;
+    color: rgb(215, 218, 220);
+    flex-grow: 1;
+    text-transform: uppercase;
+    margin-right: 6px;
+    border-radius: 4px;
+    user-select: none;
+  }
+  
+  .keyboard-row button.wide-button {
+    flex-grow: 1.5;
+  }
 
-    position: absolute;
-    top:50%;
-    left:36%;
-}
+  .button:active { 
+    background-color: green;
+  }
+
+  .wide-button:active{ 
+    background-color:green;
+  }
+  
+  .spacer-half {
+    flex-grow: 0.5;
+  }
