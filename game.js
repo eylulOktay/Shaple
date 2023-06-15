@@ -58,12 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    console.log("included");
-
-    console.log("Loading");
     //this array will store each guessed shape sequence
     let guesses = [];
 
+    //array of all guesses
     let allGuesses = [];
 
     //how many spots are open to place a shape guess
@@ -88,9 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
         //gets current sequence
         const currentGuess = getCurrentGuess();
 
-        console.log(currentGuess);
-        console.log(guesses.length);
-        
         if (guesses.length < 5){
 
             guesses.push(shape);
@@ -162,12 +157,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     for (let i = 0; i < keyPress.length; i++) {
         keyPress[i].onclick = ({target}) => {
-            console.log("key pressed");
             const shape = target.getAttribute("data-key");
-            console.log(shape);
 
             if (shape === 'enter') {
-                console.log("enter");
                 enteredSequence();
                 return;
             }
@@ -175,21 +167,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    function deleteShape() {
-        guesses.pop(shape);
-        console.log(guesses)
-
+    function deleteShape(){
         //concatonates id with shape (letter) and guesses (number)
-        let x = allGuesses.length;
-        let id = shape + x + guesses.length;
+        //let x = allGuesses.length;
+        //cellList[rowCounter + guesses.length].setAttribute("hidden");
+        if (guesses.length == 0) {
+            return
+        }
+
+        let shape = guesses[guesses.length - 1];
+        let id = shape + rowCounter + (guesses.length);
         let element = document.getElementById(id); 
-        element.setAttribute("hidden");
+        console.log(id);
+        element.setAttribute("hidden","hidden");
+        guesses.pop();
     }
      
     for (let i = 0; i < keyPress.length; i++) {
         
         keyPress[i].onclick = ({ target }) => {
-            console.log(keyPress);
             const shape = target.getAttribute("data-key");
         
             if (shape === "enter") {
