@@ -79,3 +79,21 @@ html{
   .spacer-half {
     flex-grow: 0.5;
   }
+
+  .button2 { 
+    font-size: 75px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color:#ddedeb;
+    
+    border: 7px;
+    border-color:#ddedeb;
+    border-style: solid;
+
+    background-color: transparent;
+    opacity: .75;
+
+    position: absolute;
+    top:70%;
+    left:43%;
+  }
