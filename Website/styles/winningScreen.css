@@ -45,6 +45,12 @@ h2 {
     text-align: center;
 }
 
+img {
+    position: absolute;
+    top: 30%;
+    left:30%;
+}
+
 .button1 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
