@@ -3,6 +3,7 @@
 //WHAT IS NEEDED:
 //PROBLEMS:
 //colors need to be added
+//add delete function
 //how to randomize the winnign sequence
 
 document.addEventListener("DOMContentLoaded", () => {
