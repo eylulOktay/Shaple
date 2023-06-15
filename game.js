@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "winningScreen.html";
         }
 
-        if (allGuesses.length === 5) {
+        if (allGuesses.length === 4) {
             window.location.href = "losingScreen.html";
         }
 
