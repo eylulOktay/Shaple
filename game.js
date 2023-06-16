@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let spacesOpen = 1;
 
     //hard coded placeholder sequence of keys
-    window.shapeSequence = "g f d h k"
+    let shapeSequence = "gfdhk"
 
     //keys will correspond to certain shapes D-K 
     const keyPress = document.querySelectorAll(".keyboard-row button");
@@ -142,7 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (allGuesses.length === 4) {
-            document.cookie = "shapes=" + shapeSequence;
             window.location.href = "losingScreen.html";
         }
 
