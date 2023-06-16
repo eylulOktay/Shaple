@@ -41,10 +41,16 @@ h2 {
     left:30%;
 }
 
+h3 {
+    position: absolute;
+    top: 35%;
+    left:45%;
+}
+
 img {
     position:absolute;
-    top: 30%;
-    left:30%;
+    top: 35%;
+    left:32%;
 }
 
 .center {
