@@ -67,8 +67,33 @@ document.addEventListener("DOMContentLoaded", () => {
     //how many spots are open to place a shape guess
     let spacesOpen = 1;
 
-    //hard coded placeholder sequence of keys
-    let shapeSequence = "gfdhk"
+    //shuffle function
+    function shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+      
+        // While there remain elements to shuffle.
+        while (currentIndex != 0) {
+      
+          // Pick a remaining element.
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+      
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+      
+        return array;
+      }
+
+    //creating random shape sequence
+    var a1 = ['d', 'f', 'g', 'h', 'j', 'k'];
+    var sequence = shuffle(a1);
+    var s = "";
+    for(let i = 0; i < 5; i++) {
+        s += sequence[i];
+    }
+    let shapeSequence = s;
 
     //keys will correspond to certain shapes D-K 
     const keyPress = document.querySelectorAll(".keyboard-row button");
