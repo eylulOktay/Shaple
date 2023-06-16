@@ -3,12 +3,14 @@ html{
     background-size:cover;
 }
 
+
 .title {
     color: gainsboro;
     font-size: 4.5rem;
     font-weight: bold;
     margin: 0.4rem 0 0.4rem 0;
     text-align: center;
+    opacity: .8;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
@@ -19,6 +21,7 @@ html{
     font-weight: bold;
     margin: 0.4rem 0 0.4rem 0;
     text-align: center;
+    opacity: .8;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
@@ -29,7 +32,8 @@ html{
     padding-bottom: 50px;
     padding-left: 80px;
     color: gainsboro;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    opacity: .8;
     font-weight: bold;
     margin: 0.4rem 0 0.4rem 0;
     text-align: center;
@@ -91,7 +95,7 @@ html{
     border-style: solid;
 
     background-color: transparent;
-    opacity: .75;
+    opacity: .8;
 
     position: absolute;
     top:70%;
