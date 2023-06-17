@@ -18,17 +18,52 @@
     <div class="rect">
         <h1>You Lost!</h1>
         <h2>The word was:</h2>
-        <h3 id="correctSequence"></h3>
+
         <script src="../game.js"></script>
         <script>
-          
-          document.getElementById("correctSequence").innerText = document.cookie.split("=")[1]
+          let x = document.cookie;
+          document.getElementById("correctSequence").innerText = x;
         </script>
+        <br>
 
-        <!--<button>Play Again</button> -->
-        <img src="images/respassLosing.png">
+        <table id="grid2"> 
+          
+        </table>
+       
+        <script>
+          var t = document.getElementById("grid2");
+          let row = t.insertRow(0);
+          let y = document.cookie;
+
+          for(let i = 0; i < 5; i++) {
+            let cell = row.insertCell(i);
+            let img1 = document.createElement("img");
+            let id1 = 0;
+            let id2 = i+1;
+            img1.setAttribute("id", "d1" + id1 + id2);
+
+            if(y[i] == 'd') {
+              img1.src = "images/circleShape.png";
+            } else if(y[i] == 'f') {
+              img1.src = "images/diamondShape.png";
+            } else if(y[i] == 'g') {
+              img1.src = "images/heartShape.png";
+            } else if(y[i] == 'h') {
+              img1.src = "images/squareShape.png";
+            } else if(y[i] == 'j') {
+              img1.src = "images/starShape.png";
+            } else if(y[i] == 'k') {
+              img1.src = "images/triangleShape.png"
+            }
+
+            cell.appendChild(img1);
+          }
+        </script>
+         
+        <!-- document.cookie.split("=")[1]  || <button>Play Again</button> -->
+        <img class="respass" src="images/respassLosing.png">
         <a href="gameScreen.html">
-        <button class="button1">Play Again</button>
+        <button class="button1">Play Again?</button>
             </a>
         <a href="openingScreen.html">
         <button class="button2">Home</button>

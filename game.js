@@ -93,7 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
     for(let i = 0; i < 5; i++) {
         s += sequence[i];
     }
-    window.shapeSequence = s;
+    document.cookie = s;
+    let shapeSequence = s;
+    //let cookieText = "shapeSequence=" + s;
 
     //keys will correspond to certain shapes D-K 
     const keyPress = document.querySelectorAll(".keyboard-row button");

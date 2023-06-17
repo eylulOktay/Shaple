@@ -26,7 +26,6 @@ h1 {
     color: #c07e42;
 
     position: absolute;
-    top:5%;
     left:17%;
 }
 
@@ -37,20 +36,16 @@ h2 {
     color: #c07e42;
 
     position: absolute;
-    top:25%;
+    top:20%;
     left:30%;
 }
 
-h3 {
-    position: absolute;
-    top: 35%;
-    left:45%;
-}
-
-img {
+.respass {
     position:absolute;
-    top: 35%;
+    top: 40%;
     left:32%;
+
+
 }
 
 .center {
@@ -68,7 +63,7 @@ img {
     text-shadow:2px 2px #cbcbcb;
 
     position: absolute;
-    top:80%;
+    top:85%;
     left:11%
 }
 
@@ -87,11 +82,20 @@ img {
     text-shadow:2px 2px #cbcbcb;
 
     position:absolute;
-    top:80%;
+    top:85%;
     left:64%;
 }
 
 .button2:hover {
     background-color: rgb(206, 206, 206);
+}
+
+table{
+
+
+    position: absolute;
+    top: 30%;
+    left:17%;
+
 }
 
